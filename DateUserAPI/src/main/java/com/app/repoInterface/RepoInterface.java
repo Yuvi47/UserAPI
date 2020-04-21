@@ -1,0 +1,13 @@
+package com.app.repoInterface;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.app.entity.UserEntity;
+
+@Repository
+public interface RepoInterface extends JpaRepository<UserEntity, Long> {
+
+	UserEntity findByUserId(String userId);
+
+}
